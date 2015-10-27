@@ -1,0 +1,314 @@
+ <html>
+<head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/themes/default/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+         <link href="css/app.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            
+                $(document).on("mobileinit", function (){
+                       // alert("hello you");
+                       // $.mobile.defaultPageTransition="slide";
+                       $.mobile.defaultPageTransition="flow";
+                });
+                
+        </script>
+        
+        
+        <script src="js/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+        <!--script type="text/javascript">
+               $(document).ready;
+        </script-->
+       
+        
+        
+    </head>
+ 
+    <body>
+        <div data-role="page" id="home" class ="bg-main" data-title="Home Love Travel">
+                <div data-role="header" data-position="fixed" data-fullscreen="true">
+                        <h1 class="page-header" >Welcome to Travel</h1>
+                </div>
+                  <div data-role="content">
+                      <a>
+                          <center><img src="image/my_logo.png" ></center>
+                      </a><br>
+                      
+                      <div class="center-wrapper">
+                          <a href="#main-menu" data-role ="button" 
+                           data-inline="true" data-transition="flip"
+                           data-icon ="bars" data-iconpos="top">
+                              Login
+                        </a>
+                      </div>
+                       
+                </div>
+                <div data-role="footer" data-position="fixed">
+                        <h1>&copy; teddy house</h1>
+                </div>
+        </div>
+        <div data-role="page" id="main-menu">
+                <div data-role="header" data-add-back-btn="true" data-back-btn-text ="กลับ">
+                <!--div data-role="header" data-position="fixed"-->
+                        <h1 class="page-header">Main Menu</h1>
+                        <!--a href="" data-role="button" data-rel="back" data-icon="carat-l">Back</a-->
+                        <a href="#home" data-role="button" class="ui-btn-right" 
+                              data-icon="home" data-iconpos="notext">Home</a>
+                </div>
+                <div data-role="content">
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a"></div>
+                        <div class="ui-block-b">
+                                <a href="#home" data-role="button" data-icon="home">หน้าหลัก</a>  
+                                <a href="#form1" data-role="button" data-icon="location">Form</a>
+                                <a href="test.php" rel="external" data-role="button">PHP</a>
+                                <a href="#list" rel="external" data-role="button">List</a>
+                            </div>  
+                     </div>
+                     <div data-role="controlgroup"  data-mini="true">
+                             <div data-role="content">
+                                    <form id="frm1">
+                                        <div class="ui-field-contain">
+                                            <label for="txt-name">Name:</label>
+                                            <input type="text" id="txt-name" data-clear-btn="true" data-mini="true">
+                                        </div>
+                                        <div class="ui-field-contain">
+                                               <label for="txt-pwd">Password:</label>
+                                               <input type="password" id="txt-pwd">
+                                       </div>
+                                        <div class="ui-field-contain">
+                                            <input type="button" name="btnSubmit" value="Submit" onclick="window.location='#form1'">
+                                        </div>
+                                    </form>
+                            <div class="ui-block-c"></div>
+                            </div>
+                             <div data-role="footer" >
+                                    <h3>&copy; Travel house</h3>
+                                    <a data-role="button" data-icon="tag" class="ui-btn-right" href="#aboutus"      
+                                        data-transition="flow">About Us</a>
+                                        <!--data-rel="dialog" -->
+                            </div>
+                    </div>
+            </div>
+        </div>
+         
+    
+            
+             <div data-role="page" id="form1" >
+                <header data-role="header" class="center-wrapper">Form</header>
+                      <div data-role="content">
+                          <form id="frm1">
+                              <div class="ui-field-contain">
+                                      <label for="txt-name">Name:</label>
+                                      <input type="text" id="txt-name" data-clear-btn="true" data-mini="true">
+                              </div>
+                              <div class="ui-field-contain">
+                                      <label for="txt-email">E-mail</label>
+                                      <input type="email" id="txt-email">
+                              </div>
+                              <div class="ui-field-contain">
+                                       <label for="txt-date">Date:</label>
+                                       <input type="date"  id="txt-date">
+                              </div>
+                              <br>
+                              <div class="ui-field-contain">
+                                  <!--div data-role="controlgroup" data-type="horizontal">
+                                        <label for="rd1">Bkk.</label>
+                                        <input type="radio" name="rd-prv" id="rd1">
+                                        <label for="rd2">Non.</label>
+                                        <input type="radio" name="rd-prv" id="rd2">
+                                  </div-->
+                                   <lable>Sex:</lable>
+                                  <fieldset data-role="controlgroup" data-type="horizontal">
+                                       
+                                        <label for="rd1">male</label>
+                                        <input type="radio" name="rd-prv" id="rd1">
+                                        <label for="rd2">femail</label>
+                                        <input type="radio" name="rd-prv" id="rd2">
+                                  </fieldset>
+                                  
+                              </div>
+                               <!--div class="ui-field-contain">
+                                        <label for="ck1">Bkk.</label>
+                                        <input type="checkbox" name="ck-prv" id="ck1" >
+                                         <label for="ck2">Non.</label>
+                                        <input type="checkbox" name="ck=prv" id="ck2">
+                               </div-->
+                               <lable>Activity:</lable>
+                               <div class="ui-field-contain">
+                                    <fieldset data-role="controlgroup" data-type="horizontal">
+                                              <label for="ck1">Adventure</label>
+                                              <input type="checkbox" name="ck-prv" id="ck1" >
+                                               <label for="ck2">Chill</label>
+                                              <input type="checkbox" name="ck=prv" id="ck2">
+                                     </fieldset>
+                               </div>
+                               
+                               <div class="ui-field-contain">
+                                   <label for="sel1">Contry</label>
+                                   <select id="sel1" data-native-menu="false" multiple="multiple">
+                                       <option value="1">Thai.</option>
+                                       <option value="2">Japan.</option> 
+                                       <option value="3">Korea.</option> 
+                                   </select>
+                               </div>
+                                 <div class="ui-field-contain">
+                                   <input type="button" name="btnSubmit" value="Submit" onclick="window.location='#main-menu'">
+                               </div>
+                          </form>
+                      </div>
+            </div>
+            <div data-role="page" id="aboutus">
+                    <div data-role="header" >
+                        <h1>About Us</h1>
+                    </div>
+                     <div class="center-wrapper">
+                            <div data-role="content">
+                                    <a>
+                                      <center><img src="image/bear.jpg" ></center>
+                                    </a>
+                                    <p>
+                                            hello <a data-rel="popup" href="#pop1">Hey You!!!</a>
+                                    </p>
+                                    <div data-role="popup" id="pop1">
+                                        <div data-role="header">
+                                            <h1>Fighting</h1>
+                                            <a data-icon="delete" data-iconpos="notext" data-rel="back" class="ui-btn-right"></a>
+                                        </div>
+                                        <div>
+                                            <p>WoW!!! Teddy Teddy </p>
+
+                                        </div>
+                                    </div>
+                                    <a data-role="button" data-rel="back">Back</a>
+                            </div>
+                     </div>
+            </div>
+        <section data-role="page" id="list">
+            <header data-role="header" data-theme="b">
+                <h2>List</h2>
+            </header>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true" id="lv1">
+                    <li><a>hello</a></li>
+                </ul>
+                <!--ul>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
+                </ul-->
+                <!--ol>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
+                </ol-->
+                <form class="ui-filterable">
+                    <input id="autoc-input" type="search">
+                </form>
+                <ul data-role="listview" data-filter="true"  data-filter-reveal="true" 
+                      data-input="#autoc-input" data-inset="true">
+                    <li><a>กทม</a></li>
+                    <li><a>นนทบุรี</a></li>
+                    <li><a>เลย</a></li>
+                    <li><a>กระบี่</a></li>
+                    <li><a>นครนายก</a></li>
+                </ul>
+                
+                <div data-role="collapsible-set">
+                        <div data-role="collapsible">
+                              <h2>List</h2>
+                              <!--ul data-role="listview" data-inset="true"-->
+                              <ul data-role="listview" data-inset="false"
+                                    data-autodividers="true" >
+                                   <li data-icon="forward"><a href="">A</a></li>
+                                   <li data-role="list-divider">------------</li>
+                                   <li><a>B</a></li>
+                                   <li data-icon="false"><a>C</a></li>
+                              </ul>
+                          </div>
+                          <div data-role="collapsible">
+                              <h2>List</h2>
+                              <ol data-role="listview" data-split-icon="plus" data-filter="true"
+                                     data-filter-placeholder="Teddy world !!">  <!--แยก icon เป็น 2 รายการ-->
+                                      <li data-filtertext="ก">
+                                          <a href="">
+                                              <img src="image/bear1.jpg">
+                                              <h2>A</h2>   <!--เป็นเนื้อหา-->
+                                              <p>detail bra bra!!! 123456</p>
+                                          </a>
+                                          <a href=""></a>  <!--เป็นส่วน icon-->
+                                      </li>
+                                      <li data-filtertext="ข">
+                                          <!--a><div><img src="image/icon_bear.jpg"></div ถ้าเอา div ครอบรูปจะเป็นเท่าขนาดจริง-->
+                                          <a><img src="image/icon_bear.jpg">
+                                              B
+                                              <p class="ui-li-aside ui-li-count">12</p>     <!--tagp ที่อยู่ใน a แรกของlistview ต้องระบุclass-->
+                                          </a>
+                                          <a href=""></a>
+                                      </li>
+                                      <li>
+                                          <a><img src="image/bear3.jpg">
+                                            C
+                                          </a>
+                                          <a href=""></a>
+                                      </li>
+                              </ol>
+                          </div>
+                </div>
+            </div>
+            
+        </section>
+        
+        <script type="text/javascript">
+            var BService_url="http://172.18.27.16/baac_myteddy/teddy_list.php";
+            var members;
+                $("#list").on("pageinit", function()
+                {   
+                    $("#lv1 li").remove();
+                });
+                
+                $("#list").on("pagebeforeshow", function()
+                { //alert("lll");
+                    $.getJSON(BService_url, function(data)
+                    {
+                          $("#lv1 li").remove();
+                          members = data.items;
+                          $.each(members, function (index, member)    // store ทีละ record
+                          {
+                               //alert(member);
+                               $("#lv1").append("<li><a>" +member.t_name+"</a></li>");
+                          });
+                          $("#lv1").listview("refresh");
+                    });
+                });
+                
+                
+                
+                
+               /* $(document).on("pageinit", "#home", function ()
+                {
+                        alert("Home init");
+                });
+                
+                $(document).on("pagebeforeshow", "#home", function(){
+                        alert("Home beforeshow");
+                });
+                
+                $(document).on("pageshow", "#home", function(){
+                        alert("Home show");
+                });
+                
+                /*$(document).on("pageinit", "#aboutus", function(){
+                        alert("AB init");
+                });*/
+             /*   $(document).on("pageshow", "#aboutus", function(){
+                        alert("AB show");
+                });*/
+    
+                
+        </script>
+        
+    </body>
+</html>
